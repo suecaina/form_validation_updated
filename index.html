@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration validation form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+    <!--Create registration form-->
+    <div class="container">
+        <div class="form-box">
+            <form action="" name="Formfill" onsubmit="return validation()">
+                <h2>Register</h2>
+                <p id="result"></p>
+
+                <div class="input-box">
+                    <i class='bx bxs-user' ></i>
+                    <input type="text" name="Username" placeholder="Username">
+                </div>
+                <div class="input-box">
+                    <i class='bx bxs-envelope'></i>
+                    <input type="text" name="Email" placeholder="Email">
+                </div>
+                <div class="input-box">
+                    <i class='bx bxs-lock' ></i>
+                    <input type="text" name="Password" placeholder="Password">
+                </div>
+                <div class="input-box">
+                    <i class='bx bxs-lock' ></i>
+                    <input type="text" name="CPassword" placeholder="Confirm Password">
+                </div>
+                <div class="button">
+                    <input type="submit"  class="btn" onclick="validation()" value="Register" >
+                </div>
+                <div class="group">
+                    <span><a href="#">Forgot Password</a></span>
+                    <span><a href="#">Login</a></span>
+                </div>
+            </form>
+        </div><!--end of form box-->
+
+        <!--create a pop up value-->
+        <div class="popup " id="popup">
+            <h2 style="color: black;">Thank you!</h2>
+            <!-- <box-icon name='check-circle' style="color: black;"></box-icon> -->
+            <i class='bx bx-check-square' style="color: rgb(6, 205, 145); font-size: 50px; display: contents;" ></i>
+            <p>Your Registration was successful. </p>
+            <button onclick="closeSlide()">OK</button>
+
+        </div>
+
+        <!--pop up value-->
+    </div> <!--end of container-->
+    <script src="script.js"></script>
+</body>
+</html>
